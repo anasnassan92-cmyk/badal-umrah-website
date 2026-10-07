@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 25% 97%;
+    --foreground: 25 20% 15%;
+
+    --card: 30 20% 95%;
+    --card-foreground: 25 20% 15%;
+
+    --popover: 30 25% 97%;
+    --popover-foreground: 25 20% 15%;
+
+    --primary: 30 60% 35%;
+    --primary-foreground: 40 30% 96%;
+
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 25 20% 15%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 38 70% 45%;
+    --accent-foreground: 40 30% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 30 60% 35%;
+
+    --radius: 0.75rem;
+
+    --gold: 38 70% 45%;
+    --gold-light: 38 60% 75%;
+    --gold-dark: 30 65% 28%;
+    --sand: 35 30% 93%;
+    --sand-dark: 30 20% 85%;
+    --cream: 40 40% 97%;
+    --brown: 25 40% 22%;
+    --brown-light: 25 30% 35%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-arabic {
+    font-family: 'Amiri', serif;
+  }
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)));
+  }
+  .bg-gradient-sand {
+    background: linear-gradient(180deg, hsl(var(--cream)), hsl(var(--sand)));
+  }
+  .shadow-gold {
+    box-shadow: 0 10px 40px -10px hsl(var(--gold) / 0.3);
+  }
+  .border-gold {
+    border-color: hsl(var(--gold) / 0.3);
+  }
+}
